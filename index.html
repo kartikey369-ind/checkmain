@@ -1,0 +1,1333 @@
+<script>
+    // Complete translation data
+    const translations = {
+      en: {
+        // Header
+        title: "save water",
+        subtitle: "Smart Rainwater Harvesting Assessment Portal",
+        
+        // Tabs
+        calculator: "Calculator",
+        guide: "Guide",
+        about: "About",
+        
+        // Step 1
+        basicInfo: "Basic Information",
+        fullName: "Full Name",
+        namePlaceholder: "Enter your name",
+        selectCity: "Select City",
+        chooseCityOption: "Choose your city",
+        propertyTypeLabel: "Property Type",
+        independentHouse: "Independent House",
+        apartment: "Apartment",
+        villa: "Villa/Bungalow",
+        commercial: "Commercial Building",
+        locationTip: "We'll use your location to provide accurate rainfall data and local recommendations.",
+        
+        // Step 2
+        propertyDetails: "roperty Details",
+        roofArea: "Roof Area (sq.m)",
+        roofAreaPlaceholder: "e.g. 120",
+        openSpace: "Open Space (sq.m)",
+        openSpacePlaceholder: "e.g. 50",
+        roofMaterial: "Roof Material",
+        concreteBest: "Concrete/RCC (Best)",
+        clayTiles: "Clay/Ceramic Tiles",
+        metalExcellent: "Metal Sheets (Excellent)",
+        asbestosSheets: "Asbestos Sheets",
+        familySize: "Family Size",
+        familySizePlaceholder: "e.g. 4",
+        roofAreaTip: "Roof Area Guide: Small House: 50-100 sq.m | Medium: 100-150 sq.m | Large: 150+ sq.m",
+        
+        // Step 3
+        waterReqs: " Water Requirements",
+        dailyWaterUsage: "Daily Water Usage per Person",
+        basicUsage: "Basic - 100L/day",
+        averageUsage: "Average - 150L/day",
+        highUsage: "High - 200L/day",
+        premiumUsage: "Premium - 250L/day",
+        primaryGoal: "Primary Goal",
+        drinkingCooking: "Drinking & Cooking",
+        generalHousehold: "General Household",
+        gardenLandscaping: "Garden & Landscaping",
+        groundwaterRecharge: "Groundwater Recharge",
+        allPurposes: "All Purposes",
+        whoTip: "WHO recommends minimum 50L/day. Indian urban average is 135L/day.",
+        
+        // Buttons
+        nextStep: "Next Step →",
+        previous: "← Previous",
+        generateReport: "Generate Report",
+        downloadReport: "Download Report",
+        newAssessment: "New Assessment",
+        
+        // Results
+        assessmentResults: "Your Assessment Results",
+        cubicMetersYear: "Cubic Meters/Year",
+        litersDay: "Liters/Day",
+        waterIndependence: "Water Independence",
+        feasibilityRating: "Feasibility Rating",
+        personalizedRecs: "Personalized Recommendations",
+        
+        // Guide content
+        whatIsRwh: "What is Rainwater Harvesting?",
+        rwhDescription: "Rainwater harvesting is the collection and storage of rainwater from rooftops and other surfaces for later use or groundwater recharge. It's a sustainable practice that helps conserve water and reduce dependency on external water sources.",
+        keyBenefits: "Key Benefits",
+        benefit1: "Reduces water bills by 30-50% annually",
+        benefit2: "Decreases dependence on municipal water supply",
+        benefit3: "Helps recharge groundwater levels",
+        benefit4: "Reduces stormwater runoff and flooding",
+        benefit5: "Provides backup water during shortages",
+        systemComponents: "System Components",
+        component1: "Catchment Area: Roof surface that collects rainwater",
+        component2: "Gutters & Pipes: Channel water from roof to storage",
+        component3: "First Flush Diverter: Removes initial dirty water",
+        component4: "Storage Tank: Stores collected clean water",
+        component5: "Filter System: Ensures water quality for use",
+        
+        // About content
+        aboutsave water: "About save water",
+        aboutDescription: "save water is an intelligent assessment tool designed to help homeowners and communities make informed decisions about rainwater harvesting. Our platform combines meteorological data, hydrogeological information, and engineering principles to provide accurate, personalized recommendations.",
+        ourMission: "Our Mission",
+        missionDescription: "To promote sustainable water management practices by making rainwater harvesting accessible, understandable, and actionable for everyone. We believe every rooftop can contribute to water security and environmental conservation.",
+        methodology: "Methodology",
+        method1: "Uses official IMD meteorological data for accurate rainfall information",
+        method2: "Incorporates CGWB guidelines for groundwater recharge systems",
+        method3: "Factors in local soil conditions and hydrogeological characteristics",
+        method4: "Considers building codes and structural requirements",
+        method5: "Provides cost-effective solutions within budget constraints"
+      },
+      
+      hi: {
+        // Header
+        title: "एक्वाहार्वेस्ट",
+        subtitle: "स्मार्ट वर्षा जल संचयन मूल्यांकन पोर्टल",
+        
+        // Tabs
+        calculator: "कैलकुलेटर",
+        guide: "गाइड",
+        about: "के बारे में",
+        
+        // Step 1
+        basicInfo: "बुनियादी जानकारी",
+        fullName: "पूरा नाम",
+        namePlaceholder: "अपना नाम दर्ज करें",
+        selectCity: "शहर चुनें",
+        chooseCityOption: "अपना शहर चुनें",
+        propertyTypeLabel: "संपत्ति का प्रकार",
+        independentHouse: "स्वतंत्र मकान",
+        apartment: "अपार्टमेंट",
+        villa: "विला/बंगला",
+        commercial: "व्यावसायिक भवन",
+        locationTip: "हम आपके स्थान का उपयोग करके सटीक वर्षा डेटा और स्थानीय सिफारिशें प्रदान करेंगे।",
+        
+        // Step 2
+        propertyDetails: "संपत्ति विवरण",
+        roofArea: "छत का क्षेत्रफल (वर्ग मी.)",
+        roofAreaPlaceholder: "जैसे 120",
+        openSpace: "खुला स्थान (वर्ग मी.)",
+        openSpacePlaceholder: "जैसे 50",
+        roofMaterial: "छत की सामग्री",
+        concreteBest: "कंक्रीट/आरसीसी (सर्वोत्तम)",
+        clayTiles: "मिट्टी/सिरेमिक टाइल्स",
+        metalExcellent: "धातु शीट्स (उत्कृष्ट)",
+        asbestosSheets: "एस्बेस्टस शीट्स",
+        familySize: "परिवार का आकार",
+        familySizePlaceholder: "जैसे 4",
+        roofAreaTip: "छत क्षेत्र गाइड: छोटा घर: 50-100 वर्ग मी | मध्यम: 100-150 वर्ग मी | बड़ा: 150+ वर्ग मी",
+        
+        // Step 3
+        waterReqs: "पानी की आवश्यकताएं",
+        dailyWaterUsage: "प्रति व्यक्ति दैनिक पानी का उपयोग",
+        basicUsage: "बुनियादी - 100L/दिन",
+        averageUsage: "औसत - 150L/दिन",
+        highUsage: "उच्च - 200L/दिन",
+        premiumUsage: "प्रीमियम - 250L/दिन",
+        primaryGoal: "मुख्य लक्ष्य",
+        drinkingCooking: "पीने और खाना बनाने के लिए",
+        generalHousehold: "सामान्य घरेलू उपयोग",
+        gardenLandscaping: "बगीचा और भूनिर्माण",
+        groundwaterRecharge: "भूजल पुनर्भरण",
+        allPurposes: "सभी उद्देश्य",
+        whoTip: "WHO न्यूनतम 50L/दिन की सिफारिश करता है। भारतीय शहरी औसत 135L/दिन है।",
+        
+        // Buttons
+        nextStep: "अगला चरण →",
+        previous: "← पिछला",
+        generateReport: "रिपोर्ट तैयार करें",
+        downloadReport: "रिपोर्ट डाउनलोड करें",
+        newAssessment: "नया मूल्यांकन",
+        
+        // Results
+        assessmentResults: "आपके मूल्यांकन परिणाम",
+        cubicMetersYear: "घन मीटर/वर्ष",
+        litersDay: "लीटर/दिन",
+        waterIndependence: "जल स्वतंत्रता",
+        feasibilityRating: "संभाव्यता रेटिंग",
+        personalizedRecs: "व्यक्तिगत सिफारिशें",
+        
+        // Guide content
+        whatIsRwh: "वर्षा जल संचयन क्या है?",
+        rwhDescription: "वर्षा जल संचयन छत और अन्य सतहों से वर्षा जल एकत्र करने और बाद में उपयोग या भूजल पुनर्भरण के लिए भंडारण करने की प्रक्रिया है। यह एक टिकाऊ अभ्यास है जो पानी का संरक्षण करने और बाहरी जल स्रोतों पर निर्भरता कम करने में मदद करता है।",
+        keyBenefits: "मुख्य लाभ",
+        benefit1: "वार्षिक रूप से पानी के बिल में 30-50% कमी",
+        benefit2: "नगरपालिका जल आपूर्ति पर निर्भरता कम करता है",
+        benefit3: "भूजल स्तर को रिचार्ज करने में मदद करता है",
+        benefit4: "तूफानी पानी के बहाव और बाढ़ को कम करता है",
+        benefit5: "पानी की कमी के दौरान बैकअप पानी प्रदान करता है",
+        systemComponents: "सिस्टम घटक",
+        component1: "कैचमेंट एरिया: छत की सतह जो वर्षा जल एकत्र करती है",
+        component2: "गटर और पाइप: छत से भंडारण तक पानी पहुंचाते हैं",
+        component3: "फर्स्ट फ्लश डायवर्टर: प्रारंभिक गंदे पानी को हटाता है",
+        component4: "भंडारण टैंक: एकत्रित स्वच्छ पानी का भंडारण करता है",
+        component5: "फिल्टर सिस्टम: उपयोग के लिए पानी की गुणवत्ता सुनिश्चित करता है",
+        
+        // About content
+        aboutsave water: "एक्वाहार्वेस्ट के बारे में",
+        aboutDescription: "एक्वाहार्वेस्ट एक बुद्धिमान मूल्यांकन उपकरण है जो घर के मालिकों और समुदायों को वर्षा जल संचयन के बारे में सूचित निर्णय लेने में मदद करने के लिए डिज़ाइन किया गया है। हमारा प्लेटफॉर्म सटीक, व्यक्तिगत सिफारिशें प्रदान करने के लिए मौसम विज्ञान डेटा, हाइड्रोजियोलॉजिकल जानकारी और इंजीनियरिंग सिद्धांतों को जोड़ता है।",
+        ourMission: "हमारा मिशन",
+        missionDescription: "वर्षा जल संचयन को सभी के लिए सुलभ, समझने योग्य और कार्यान्वित करने योग्य बनाकर टिकाऊ जल प्रबंधन प्रथाओं को बढ़ावा देना। हम मानते हैं कि हर छत जल सुरक्षा और पर्यावरण संरक्षण में योगदान दे सकती है।",
+        methodology: "पद्धति",
+        method1: "सटीक वर्षा जानकारी के लिए आधिकारिक IMD मौसम विज्ञान डेटा का उपयोग",
+        method2: "भूजल पुनर्भरण प्रणालियों के लिए CGWB दिशानिर्देशों को शामिल करता है",
+        method3: "स्थानीय मिट्टी की स्थितियों और हाइड्रोजियोलॉजिकल विशेषताओं को ध्यान में रखता है",
+        method4: "भवन कोड और संरचनात्मक आवश्यकताओं पर विचार करता है",
+        method5: "बजट की बाधाओं के भीतर लागत-प्रभावी समाधान प्रदान करता है"
+      },
+      
+      te: {
+        // Header
+        title: "ఆక్వాహార్వెస్ట్",
+        subtitle: "స్మార్ట్ వర్షపు నీరు సేకరణ అంచనా పోర్టల్",
+        
+        // Tabs
+        calculator: "గణకం",
+        guide: "గైడ్",
+        about: "గురించి",
+        
+        // Step 1
+        basicInfo: "ప్రాథమిక సమాచారం",
+        fullName: "పూర్తి పేరు",
+        namePlaceholder: "మీ పేరు నమోదు చేయండి",
+        selectCity: "నగరం ఎంచుకోండి",
+        chooseCityOption: "మీ నగరం ఎంచుకోండి",
+        propertyTypeLabel: "ఆస్తి రకం",
+        independentHouse: "స్వతంత్ర ఇల్లు",
+        apartment: "అపార్ట్‌మెంట్",
+        villa: "విల్లా/బంగ్లా",
+        commercial: "వాణిజ్య భవనం",
+        locationTip: "మేము మీ స్థానాన్ని ఉపయోగించి ఖచ్చితమైన వర్షపాతం డేటా మరియు స్థానిక సిఫార్సులను అందిస్తాము.",
+        
+        // Step 2
+        propertyDetails: "ఆస్తి వివరాలు",
+        roofArea: "పైకప్పు వైశాల్యం (చ.మీ.)",
+        roofAreaPlaceholder: "ఉదా. 120",
+        openSpace: "ఖాళీ స్థలం (చ.మీ.)",
+        openSpacePlaceholder: "ఉదా. 50",
+        roofMaterial: "పైకప్పు పదార్థం",
+        concreteBest: "కాంక్రీట్/ఆర్‌సిసి (ఉత్తమం)",
+        clayTiles: "బంకమట్టి/సిరామిక్ టైల్స్",
+        metalExcellent: "మెటల్ షీట్స్ (అద్భుతం)",
+        asbestosSheets: "ఆస్బెస్టాస్ షీట్స్",
+        familySize: "కుటుంబ పరిమాణం",
+        familySizePlaceholder: "ఉదా. 4",
+        roofAreaTip: "పైకప్పు వైశాల్య గైడ్: చిన్న ఇల్లు: 50-100 చ.మీ | మధ్యమ: 100-150 చ.మీ | పెద్ద: 150+ చ.మీ",
+        
+        // Step 3
+        waterReqs: "నీటి అవసరాలు",
+        dailyWaterUsage: "ప్రతి వ్యక్తికి రోజువారీ నీటి వినియోగం",
+        basicUsage: "ప్రాథమిక - 100L/రోజు",
+        averageUsage: "సగటు - 150L/రోజు",
+        highUsage: "అధిక - 200L/రోజు",
+        premiumUsage: "ప్రీమియం - 250L/రోజు",
+        primaryGoal: "ప్రాథమిక లక్ష్యం",
+        drinkingCooking: "తాగడం మరియు వంట",
+        generalHousehold: "సాధారణ గృహోపయోగం",
+        gardenLandscaping: "తోట మరియు లాండ్‌స్కేపింగ్",
+        groundwaterRecharge: "భూగర్భజల రీచార్జ్",
+        allPurposes: "అన్ని ప్రయోజనాలు",
+        whoTip: "WHO కనీసం 50L/రోజుకు సిఫారిసు చేస్తుంది. భారతీయ పట్టణ సగటు 135L/రోజుకు.",
+        
+        // Buttons
+        nextStep: "తదుపరి దశ →",
+        previous: "← మునుపటి",
+        generateReport: "నివేదిక రూపొందించండి",
+        downloadReport: "నివేదిక డౌన్‌లోడ్ చేయండి",
+        newAssessment: "కొత్త అంచనా",
+        
+        // Results
+        assessmentResults: "మీ అంచనా ఫలితాలు",
+        cubicMetersYear: "క్యూబిక్ మీటర్లు/సంవత్సరం",
+        litersDay: "లీటర్లు/రోజు",
+        waterIndependence: "నీటి స్వాతంత్ర్యం",
+        feasibilityRating: "సాధ్యత రేటింగ్",
+        personalizedRecs: "వ్యక్తిగత సిఫార్సులు",
+        
+        // Guide content
+        whatIsRwh: "వర్షపు నీరు సేకరణ అంటే ఏమిటి?",
+        rwhDescription: "వర్షపు నీరు సేకరణ అంటే పైకప్పులు మరియు ఇతర ఉపరితలాల నుండి వర్షపు నీటిని సేకరించడం మరియు తరువాతి ఉపయోగం లేదా భూగర్భజల రీచార్జ్ కోసం నిల్వ చేయడం. ఇది నీటిని సంరక్షించడానికి మరియు బాహ్య నీటి వనరులపై ఆధారపడటాన్ని తగ్గించడానికి సహాయపడే స్థిరమైన అభ్యాసం.",
+        keyBenefits: "ముఖ్య ప్రయోజనాలు",
+        benefit1: "వార్షికంగా నీటి బిల్లులను 30-50% తగ్గిస్తుంది",
+        benefit2: "పురపాలక నీటి సరఫరాపై ఆధారపడటం తగ్గిస్తుంది",
+        benefit3: "భూగర్భజల స్థాయిలను రీచార్జ్ చేయడంలో సహాయపడుతుంది",
+        benefit4: "తుఫాను నీటి ప్రవాహం మరియు వరదలను తగ్గిస్తుంది",
+        benefit5: "కొరత సమయాల్లో బ్యాకప్ నీటిను అందిస్తుంది",
+        systemComponents: "వ్యవస్థ భాగాలు",
+        component1: "క్యాచ్‌మెంట్ ఏరియా: వర్షపు నీటిని సేకరించే పైకప్పు ఉపరితలం",
+        component2: "గట్టర్లు మరియు పైప్‌లు: పైకప్పు నుండి నిల్వకు నీటిని చేర్చుతాయి",
+        component3: "ఫస్ట్ ఫ్లష్ డైవర్టర్: ప్రారంభ మురికి నీటిను తొలగిస్తుంది",
+        component4: "నిల్వ ట్యాంకు: సేకరించిన స్వచ్ఛమైన నీటిని నిల్వ చేస్తుంది",
+        component5: "ఫిల్టర్ సిస్టమ్: ఉపయోగం కోసం నీటి నాణ్యతను నిర్ధారిస్తుంది",
+        
+        // About content
+        aboutsave water: "ఆక్వాహార్వెస్ట్ గురించి",
+        aboutDescription: "ఆక్వాహార్వెస్ట్ అనేది ఇంటి యజమానులు మరియు కమ్యూనిటీలు వర్షపు నీరు సేకరణ గురించి సమాచారంతో కూడిన నిర్ణయాలు తీసుకోవడంలో సహాయపడటానికి రూపొందించబడిన తెలివైన అంచనా సాధనం. మా ప్లాట్‌ఫారమ్ ఖచ్చితమైన, వ్యక్తిగత సిఫార్సులను అందించడానికి వాతావరణ డేటా, హైడ్రోజియోలాజికల్ సమాచారం మరియు ఇంజినీరింగ్ సూత్రాలను మిళితం చేస్తుంది.",
+        ourMission: "మా మిషన్",
+        missionDescription: "వర్షపు నీరు సేకరణను అందరికీ అందుబాటులో ఉండేలా, అర్థమయ్యేలా మరియు కార్యరూపం దాల్చేలా చేయడం ద్వారా స్థిరమైన నీటి నిర్వహణ పద్ధతులను ప్రోత్సహించడం. ప్రతి పైకప్పు నీటి భద్రత మరియు పర్యావరణ పరిరక్షణకు దోహదపడగలదని మేము నమ్ముతున్నాము.",
+        methodology: "🔬 పద్దతి",
+        method1: "ఖచ్చితమైన వర్షపాత సమాచారం కోసం అధికారిక IMD వాతావరణ డేటాను ఉపయోగిస్తుంది",
+        method2: "భూగర్భజల రీచార్జ్ వ్యవస్థల కోసం CGWB మార్గదర్శకాలను చేర్చుతుంది",
+        method3: "స్థానిక మట్టి పరిస్థితులు మరియు హైడ్రోజియోలాజికల్ లక్షణాలను పరిగణనలోకి తీసుకుంటుంది",
+        method4: "భవన కోడ్‌లు మరియు నిర్మాణ అవసరాలను పరిగణిస్తుంది",
+        method5: "బడ్జెట్ పరిమితుల లోపల ఖర్చు-సమర్థవంతమైన పరిష్కారాలను అందిస్తుంది"
+      }
+    };
+
+    // City rainfall and groundwater data
+    const cityData = {
+      "Mumbai": { rainfall: 2213, groundwater: 5 },
+      "Delhi": { rainfall: 758.9, groundwater: 20 },
+      "Bangalore": { rainfall: 900, groundwater: 10 },
+      "Chennai": { rainfall: 1400, groundwater: 12 },
+      "Hyderabad": { rainfall: 859.6, groundwater: 15 },
+      "Visakhapatnam": { rainfall: 1200, groundwater: 10 },
+      "Surat": { rainfall: 1500, groundwater: 12 },
+      "Vadodara": { rainfall: 800, groundwater: 20 },
+      "Jaipur": { rainfall: 650, groundwater: 30 },
+      "Bhopal": { rainfall: 1200, groundwater: 18 },
+      "Patna": { rainfall: 1200, groundwater: 15 },
+      "Coimbatore": { rainfall: 800, groundwater: 15 }
+    };
+
+    let currentStep = 1;
+    let currentLanguage = 'en';
+
+    // Complete language switching function
+    function setLanguage(lang) {
+      currentLanguage = lang;
+      document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const t = translations[lang];
+      
+      // Update header
+      document.getElementById('main-title').textContent = t.title;
+      document.getElementById('main-subtitle').textContent = t.subtitle;
+      
+      // Update tab buttons
+      document.querySelectorAll('.tab-btn span').forEach((span, index) => {
+        const tabs = [t.calculator, t.guide, t.about];
+        span.textContent = tabs[index];
+      });
+      
+      // Update all form elements
+      updateFormTexts(t);
+      updateGuideTexts(t);
+      updateAboutTexts(t);
+    }
+
+    function updateFormTexts(t) {
+      // Step titles
+      const stepTitles = document.querySelectorAll('#calculator h3');
+      if (stepTitles[0]) stepTitles[0].textContent = t.basicInfo;
+      if (stepTitles[1]) stepTitles[1].textContent = t.propertyDetails;
+      if (stepTitles[2]) stepTitles[2].textContent = t.waterReqs;
+      
+      // Labels and placeholders
+      const labels = document.querySelectorAll('#calculator label');
+      const inputs = document.querySelectorAll('#calculator input');<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>save water - Smart Rainwater Assessment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    .header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .language-bar {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .lang-btn {
+      background: rgba(255,255,255,0.2);
+      border: none;
+      color: white;
+      padding: 8px 15px;
+      margin: 0 5px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .lang-btn.active {
+      background: rgba(255,255,255,0.3);
+      transform: scale(1.05);
+    }
+
+    .main-card {
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    .tabs {
+      display: flex;
+      margin-bottom: 30px;
+      background: #f1f3f4;
+      border-radius: 15px;
+      padding: 5px;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 15px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-weight: 600;
+      border-radius: 10px;
+      transition: all 0.3s;
+      font-size: 16px;
+    }
+
+    .tab-btn.active {
+      background: #00bcd4;
+      color: white;
+      box-shadow: 0 4px 15px rgba(0,188,212,0.3);
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .step-indicator {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      gap: 20px;
+    }
+
+    .step {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      color: #666;
+      position: relative;
+    }
+
+    .step.active {
+      background: #00bcd4;
+      color: white;
+    }
+
+    .step.completed {
+      background: #4caf50;
+      color: white;
+    }
+
+    .form-section {
+      display: none;
+    }
+
+    .form-section.active {
+      display: block;
+      animation: slideIn 0.5s ease;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #444;
+      font-size: 15px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid #e1e5e9;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: all 0.3s;
+      background: white;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: #00bcd4;
+      box-shadow: 0 0 0 3px rgba(0,188,212,0.1);
+    }
+
+    .tip {
+      background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+      border-left: 4px solid #00bcd4;
+      padding: 12px 16px;
+      border-radius: 8px;
+      margin: 15px 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #00bcd4, #0288d1);
+      color: white;
+    }
+
+    .btn-secondary {
+      background: #f5f5f5;
+      color: #333;
+      border: 2px solid #e0e0e0;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .results {
+      margin-top: 30px;
+      display: none;
+    }
+
+    .results.show {
+      display: block;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .results-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .results-header h3 {
+      font-size: 2rem;
+      color: #0288d1;
+      margin-bottom: 10px;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .metric-card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      border-top: 4px solid #00bcd4;
+      transition: transform 0.3s;
+    }
+
+    .metric-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .metric-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #0288d1;
+      margin-bottom: 8px;
+    }
+
+    .metric-label {
+      font-size: 14px;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .recommendations {
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+      border-radius: 15px;
+      padding: 25px;
+      margin-bottom: 20px;
+    }
+
+    .recommendations h4 {
+      color: #0288d1;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .rec-item {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      border-left: 4px solid #4caf50;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .guide-content {
+      line-height: 1.8;
+    }
+
+    .guide-section {
+      margin-bottom: 30px;
+    }
+
+    .guide-section h3 {
+      color: #0288d1;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
+      
+      .main-card {
+        padding: 20px;
+      }
+      
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+      
+      .header h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div class="header">
+    <h1 id="main-title" 
+        data-en="Save Water" 
+        data-hi="पानी बचाएँ" 
+        data-te="నీటిని ఆదా చేయండి">Save Water</h1>
+    <p id="main-subtitle" 
+       data-en="Smart Rainwater Harvesting Assessment Portal" 
+       data-hi="स्मार्ट वर्षा जल संचयन मूल्यांकन पोर्टल" 
+       data-te="స్మార్ట్ రైన్‌వాటర్ హార్వెస్టింగ్ అంచనా పోర్టల్">
+       Smart Rainwater Harvesting Assessment Portal
+    </p>
+  </div>
+</div>
+
+
+    <div class="language-bar">
+      <button class="lang-btn active" onclick="setLanguage('en')">🇺🇸 English</button>
+      <button class="lang-btn" onclick="setLanguage('hi')">🇮🇳 हिंदी</button>
+      <button class="lang-btn" onclick="setLanguage('te')">🇮🇳 తెలుగు</button>
+    </div>
+
+    <div class="main-card">
+      <div class="tabs">
+        <button class="tab-btn active" onclick="openTab('calculator')">
+          <span data-en="Calculator" data-hi="कैलकुलेटर" data-te="గణకం">Calculator</span>
+        </button>
+        <button class="tab-btn" onclick="openTab('guide')">
+          <span data-en="Guide" data-hi="गाइड" data-te="గైడ్">Guide</span>
+        </button>
+        <button class="tab-btn" onclick="openTab('about')">
+          <span data-en="About" data-hi="के बारे में" data-te="గురించి">About</span>
+        </button>
+      </div>
+
+      <!-- Calculator Tab -->
+      <div id="calculator" class="tab-content active">
+        <div class="step-indicator">
+          <div class="step active" id="step-1">1</div>
+          <div class="step" id="step-2">2</div>
+          <div class="step" id="step-3">3</div>
+        </div>
+
+        <!-- Step 1: Basic Info -->
+        <div id="form-step-1" class="form-section active">
+          <h3 data-en="Basic Information" data-hi="बुनियादी जानकारी" data-te="ప్రాథమిక సమాచారం">Basic Information</h3>
+          
+          <div class="form-group">
+            <label data-en="Full Name" data-hi="पूरा नाम" data-te="పూర్తి పేరు">Full Name</label>
+            <input type="text" id="userName" placeholder="Enter your name">
+          </div>
+          
+          <div class="form-grid">
+  <div class="form-group">
+    <label data-en="Select City" data-hi="शहर चुनें" data-te="నగరం ఎంచుకోండి">
+      Select City
+    </label>
+    <select id="userCity">
+      <option data-en="Choose your city" data-hi="अपना शहर चुनें" data-te="మీ నగరాన్ని ఎంచుకోండి" value="">
+        Choose your city
+      </option>
+      <option data-en="Mumbai, Maharashtra" data-hi="मुंबई, महाराष्ट्र" data-te="ముంబై, మహారాష్ట్ర" value="Mumbai">
+        Mumbai, Maharashtra
+      </option>
+      <option data-en="Delhi" data-hi="दिल्ली" data-te="దిల్లీ" value="Delhi">
+        Delhi
+      </option>
+      <option data-en="Bangalore, Karnataka" data-hi="बेंगलुरु, कर्नाटक" data-te="బెంగళూరు, కర్ణాటక" value="Bangalore">
+        Bangalore, Karnataka
+      </option>
+      <option data-en="Chennai, Tamil Nadu" data-hi="चेन्नई, तमिलनाडु" data-te="చెన్నై, తమిళనాడు" value="Chennai">
+        Chennai, Tamil Nadu
+      </option>
+      <option data-en="Hyderabad, Telangana" data-hi="हैदराबाद, तेलंगाना" data-te="హైదరాబాద్, తెలంగాణ" value="Hyderabad">
+        Hyderabad, Telangana
+      </option>
+      <option data-en="Visakhapatnam, Andhra Pradesh" data-hi="विशाखापत्तनम, आंध्र प्रदेश" data-te="విశాఖపట్నం, ఆంధ్ర ప్రదేశ్" value="Visakhapatnam">
+        Visakhapatnam, Andhra Pradesh
+      </option>
+      <option data-en="Surat, Gujarat" data-hi="सूरत, गुजरात" data-te="సूरत, గుజరాత్" value="Surat">
+        Surat, Gujarat
+      </option>
+      <option data-en="Vadodara, Gujarat" data-hi="वडोदरा, गुजरात" data-te="వడోదరా, గుజరాత్" value="Vadodara">
+        Vadodara, Gujarat
+      </option>
+      <option data-en="Jaipur, Rajasthan" data-hi="जयपुर, राजस्थान" data-te="జైపూర్, రాజస్థాన్" value="Jaipur">
+        Jaipur, Rajasthan
+      </option>
+      <option data-en="Bhopal, Madhya Pradesh" data-hi="भोपाल, मध्य प्रदेश" data-te="భోపాల్, మధ్యప్రదేశ్" value="Bhopal">
+        Bhopal, Madhya Pradesh
+      </option>
+      <option data-en="Patna, Bihar" data-hi="पटना, बिहार" data-te="పట్నా, బీహార్" value="Patna">
+        Patna, Bihar
+      </option>
+      <option data-en="Coimbatore, Tamil Nadu" data-hi="कोयम्बटूर, तमिलनाडु" data-te="కోయంబత్తూర్, తమిళనాడు" value="Coimbatore">
+        Coimbatore, Tamil Nadu
+      </option>
+    </select>
+  </div>
+</div>
+
+            
+<div class="form-group">
+  <label data-en="Property Type" data-hi="संपत्ति का प्रकार" data-te="ఆస్తి రకం">
+    Property Type
+  </label>
+  <select id="propertyType">
+    <option data-en="Independent House" data-hi="स्वतंत्र घर" data-te="స్వతంత్ర ఇల్లు" value="house">
+      Independent House
+    </option>
+    <option data-en="Apartment" data-hi="अपार्टमेंट" data-te="అపార్ట్మెంట్" value="apartment">
+      Apartment
+    </option>
+    <option data-en="Villa/Bungalow" data-hi="विला/बंगलो" data-te="విల్లా/బంగ్లా" value="villa">
+      Villa/Bungalow
+    </option>
+    <option data-en="Commercial Building" data-hi="वाणिज्यिक इमारत" data-te="వాణిజ్య భవనం" value="commercial">
+      Commercial Building
+    </option>
+  </select>
+</div>
+
+
+          <div class="tip">
+            <span data-en="We'll use your location to provide accurate rainfall data and local recommendations." 
+                  data-hi="हम आपके स्थान का उपयोग करके सटीक वर्षा डेटा और स्थानीय सिफारिशें प्रदान करेंगे।"
+                  data-te="మేము మీ స్థానాన్ని ఉపయోగించి ఖచ్చితమైన వర్షపాతం డేటా మరియు స్థానిక సిఫార్సులను అందిస్తాము।">
+              We'll use your location to provide accurate rainfall data and local recommendations.
+            </span>
+          </div>
+
+          <div class="buttons">
+            <button class="btn btn-primary" onclick="goToStep(2)">
+              <span data-en="Next Step →" data-hi="अगला चरण →" data-te="తదుపరి దశ →">Next Step →</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2: Property Details -->
+        <div id="form-step-2" class="form-section">
+          <h3 data-en="Property Details" data-hi="संपत्ति विवरण" data-te="ఆస్తి వివరాలు">Property Details</h3>
+          
+          <div class="form-grid">
+            <div class="form-group">
+              <label data-en="Roof Area (sq.m)" data-hi="छत का क्षेत्रफल (वर्ग मी.)" data-te="పైకప్పు వైశాల్యం (చ.మీ.)">Roof Area (sq.m)</label>
+              <input type="number" id="roofArea" placeholder="e.g. 120" min="1">
+            </div>
+            
+            <div class="form-group">
+              <label data-en="Open Space (sq.m)" data-hi="खुला स्थान (वर्ग मी.)" data-te="ఖాళీ స్థలం (చ.మీ.)">Open Space (sq.m)</label>
+              <input type="number" id="openSpace" placeholder="e.g. 50" min="0">
+            </div>
+            
+            <div class="form-group">
+  <label id="roofMaterialLabel" data-en="Roof Material" data-hi="छत की सामग्री" data-te="పైకప్పు పదార్థం">
+    Roof Material
+  </label>
+  <select id="roofMaterial">
+    <option value="concrete" data-en="Concrete/RCC (Best)" data-hi="कांक्रीट/RCC (सर्वश्रेष्ठ)" data-te="కాంక్రీటు/RCC (మంచిది)">Concrete/RCC (Best)</option>
+    <option value="tiles" data-en="Clay/Ceramic Tiles" data-hi="मिट्टी/सिरेमिक टाइल्स" data-te="మట్టి/సెరామిక్ టైల్స్">Clay/Ceramic Tiles</option>
+    <option value="metal" data-en="Metal Sheets (Excellent)" data-hi="धातु शीट्स (उत्कृष्ट)" data-te="మెటల్ షీట్స్ (అద్భుతం)">Metal Sheets (Excellent)</option>
+    <option value="asbestos" data-en="Asbestos Sheets" data-hi="एस्बेस्टस शीट्स" data-te="అస్బెస్టస్ షీట్స్">Asbestos Sheets</option>
+  </select>
+</div>
+            
+            <div class="form-group">
+              <label data-en="Family Size" data-hi="परिवार का आकार" data-te="కుటుంబ పరిమాణం">Family Size</label>
+              <input type="number" id="familySize" placeholder="e.g. 4" min="1">
+            </div>
+          </div>
+
+          <div class="tip">
+            <span data-en="Roof Area Guide: Small House: 50-100 sq.m | Medium: 100-150 sq.m | Large: 150+ sq.m"
+                  data-hi="छत क्षेत्र गाइड: छोटा घर: 50-100 वर्ग मी | मध्यम: 100-150 वर्ग मी | बड़ा: 150+ वर्ग मी"
+                  data-te="పైకప్పు వైశాల్య గైడ్: చిన్న ఇల్లు: 50-100 చ.మీ | మధ్యమ: 100-150 చ.మీ | పెద్ద: 150+ చ.మీ">
+              Roof Area Guide: Small House: 50-100 sq.m | Medium: 100-150 sq.m | Large: 150+ sq.m
+            </span>
+          </div>
+
+          <div class="buttons">
+            <button class="btn btn-secondary" onclick="goToStep(1)">
+              <span data-en="← Previous" data-hi="← पिछला" data-te="← మునుపటి">← Previous</span>
+            </button>
+            <button class="btn btn-primary" onclick="goToStep(3)">
+              <span data-en="Next Step →" data-hi="अगला चरण →" data-te="తదుపరి దశ →">Next Step →</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 3: Water Requirements -->
+        <div id="form-step-3" class="form-section">
+          <h3 data-en="Water Requirements" data-hi="पानी की आवश्यकताएं" data-te="నీటి అవసరాలు">Water Requirements</h3>
+          
+          <div class="form-grid">
+  <div class="form-group">
+    <label id="waterUsageLabel" data-en="Daily Water Usage per Person" data-hi="प्रति व्यक्ति दैनिक पानी का उपयोग" data-te="ప్రతి వ్యక్తికి రోజువారీ నీటి వినియోగం">
+      Daily Water Usage per Person
+    </label>
+    <select id="waterUsage">
+      <option value="100" data-en="Basic - 100L/day" data-hi="बेसिक - 100L/दिन" data-te="బేసిక్ - 100L/రోజు">Basic - 100L/day</option>
+      <option value="150" selected data-en="Average - 150L/day" data-hi="औसत - 150L/दिन" data-te="సగటు - 150L/రోజు">Average - 150L/day</option>
+      <option value="200" data-en="High - 200L/day" data-hi="उच्च - 200L/दिन" data-te="హై - 200L/రోజు">High - 200L/day</option>
+      <option value="250" data-en="Premium - 250L/day" data-hi="प्रीमियम - 250L/दिन" data-te="ప్రీమియం - 250L/రోజు">Premium - 250L/day</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <label id="usageGoalLabel" data-en="Primary Goal" data-hi="मुख्य लक्ष्य" data-te="ప్రాథమిక లక్ష్యం">
+      Primary Goal
+    </label>
+    <select id="usageGoal">
+      <option value="drinking" data-en="Drinking & Cooking" data-hi="पानी पीना और खाना पकाना" data-te="తాగుట & వంట">Drinking & Cooking</option>
+      <option value="household" data-en="General Household" data-hi="सामान्य घरेलू उपयोग" data-te="సాధారణ గృహ వినియోగం">General Household</option>
+      <option value="garden" data-en="Garden & Landscaping" data-hi="बगीचा और लैंडस्केपिंग" data-te="గార్డెన్ & ల్యాండ్స్‌కేపింగ్">Garden & Landscaping</option>
+      <option value="groundwater" data-en="Groundwater Recharge" data-hi="भूजल पुनर्भरण" data-te="గ్రౌండ్వాటర్ రీఛార్జ్">Groundwater Recharge</option>
+      <option value="all" data-en="All Purposes" data-hi="सभी प्रयोजनों के लिए" data-te="అన్ని ప్రయోజనాలు">All Purposes</option>
+    </select>
+  </div>
+</div>
+
+          <div class="tip">
+            <span data-en="WHO recommends minimum 50L/day. Indian urban average is 135L/day."
+                  data-hi="WHO न्यूनतम 50L/दिन की सिफारिश करता है। भारतीय शहरी औसत 135L/दिन है।"
+                  data-te="WHO కనీసం 50L/రోజుకు సిఫారిసు చేస్తుంది. భారతీయ పట్టణ సగటు 135L/రోజుకు.">
+              WHO recommends minimum 50L/day. Indian urban average is 135L/day.
+            </span>
+          </div>
+
+          <div class="buttons">
+            <button class="btn btn-secondary" onclick="goToStep(2)">
+              <span data-en="← Previous" data-hi="← पिछला" data-te="← మునుపటి">← Previous</span>
+            </button>
+            <button class="btn btn-primary" onclick="calculateResults()">
+              <span data-en="Generate Report" data-hi="रिपोर्ट तैयार करें" data-te="నివేదిక రూపొందించండి">Generate Report</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results" class="results">
+          <div class="results-header">
+            <h3 data-en="Your Assessment Results" data-hi="आपके मूल्यांकन परिणाम" data-te="మీ అంచనా ఫలితాలు">Your Assessment Results</h3>
+            <p id="welcomeMsg"></p>
+          </div>
+
+          <div class="metrics" id="metricsContainer">
+            <!-- Metrics will be populated by JavaScript -->
+          </div>
+
+          <div class="recommendations">
+            <h4 data-en="Personalized Recommendations" data-hi="व्यक्तिगत सिफारिशें" data-te="వ్యక్తిగత సిఫార్సులు">Personalized Recommendations</h4>
+            <div id="recommendationsContainer">
+              <!-- Recommendations will be populated -->
+            </div>
+          </div>
+
+          <div class="buttons">
+            <button class="btn btn-primary" onclick="downloadReport()">
+              <span data-en="Download Report" data-hi="रिपोर्ट डाउनलोड करें" data-te="నివేదిక డౌన్‌లోడ్ చేయండి">Download Report</span>
+            </button>
+            <button class="btn btn-secondary" onclick="restartCalculator()">
+              <span data-en="New Assessment" data-hi="नया मूल्यांकन" data-te="కొత్త అంచనా">New Assessment</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guide Tab -->
+      <div id="guide" class="tab-content">
+  <div class="guide-content">
+    <!-- What is Rainwater Harvesting -->
+    <div class="guide-section">
+      <h3 data-en="What is Rainwater Harvesting?" data-hi="वर्षा जल संचयन क्या है?" data-te="వర్షపు నీటి సేకరణ ఏమిటి?">
+        What is Rainwater Harvesting?
+      </h3>
+      <p data-en="Rainwater harvesting is the collection and storage of rainwater from rooftops and other surfaces for later use or groundwater recharge. It's a sustainable practice that helps conserve water and reduce dependency on external water sources."
+         data-hi="वर्षा जल संचयन छत और अन्य सतहों से वर्षा जल एकत्र करने और भंडारण करने की प्रक्रिया है, ताकि इसे बाद में उपयोग या भूजल पुनर्भरण के लिए किया जा सके। यह एक सतत अभ्यास है जो पानी की बचत करता है और बाहरी जल स्रोतों पर निर्भरता को कम करता है।"
+         data-te="వర్షపు నీటిని తర్వాత ఉపయోగం లేదా భూగర్భ జలాన్ని పునర్వినియోగం కోసం పెద్దిమ్మలు మరియు ఇతర ఉపరితలాల నుండి సేకరించడం మరియు నిల్వ చేయడం వర్షపు నీటి సేకరణ. ఇది నీటిని సంరక్షించడానికి మరియు బాహ్య నీటి వనరులపై ఆధారాన్ని తగ్గించడానికి సహాయపడే సుస్థిర సాధన."
+      >
+        Rainwater harvesting is the collection and storage of rainwater from rooftops and other surfaces for later use or groundwater recharge. It's a sustainable practice that helps conserve water and reduce dependency on external water sources.
+      </p>
+    </div>
+
+    <!-- Key Benefits -->
+    <div class="guide-section">
+      <h3 data-en="Key Benefits" data-hi="मुख्य लाभ" data-te="ముఖ్యమైన లాభాలు">Key Benefits</h3>
+      <div class="rec-item" data-en="Reduces water bills by 30-50% annually" data-hi="वार्षिक पानी के बिल में 30-50% की बचत करता है" data-te="నీరుబిల్లను వార్షికంగా 30-50% తగ్గిస్తుంది">Reduces water bills by 30-50% annually</div>
+      <div class="rec-item" data-en="Decreases dependence on municipal water supply" data-hi="नगरपालिका जल आपूर्ति पर निर्भरता कम करता है" data-te="పౌర నీటి సరఫరాపై ఆధారాన్ని తగ్గిస్తుంది">Decreases dependence on municipal water supply</div>
+      <div class="rec-item" data-en="Helps recharge groundwater levels" data-hi="भूजल स्तर को पुनर्भरण करने में मदद करता है" data-te="భూగర్భ జల స్థాయిలను రీఛార్జ్ చేయడంలో సహాయపడుతుంది">Helps recharge groundwater levels</div>
+      <div class="rec-item" data-en="Reduces stormwater runoff and flooding" data-hi="तूफानी जल बहाव और बाढ़ को कम करता है" data-te="తుఫాన్ నీటి ప్రవాహం మరియు వరదలను తగ్గిస్తుంది">Reduces stormwater runoff and flooding</div>
+      <div class="rec-item" data-en="Provides backup water during shortages" data-hi="कमी के दौरान बैकअप पानी प्रदान करता है" data-te="కొరత సమయంలో బ్యాకప్ నీటిని అందిస్తుంది">Provides backup water during shortages</div>
+    </div>
+
+    <!-- System Components -->
+    <div class="guide-section">
+      <h3 data-en="System Components" data-hi="सिस्टम घटक" data-te="సిస్టమ్ భాగాలు">System Components</h3>
+      <div class="rec-item" data-en="Catchment Area: Roof surface that collects rainwater" data-hi="कैचमेंट क्षेत्र: छत की सतह जो वर्षा जल एकत्र करती है" data-te="క్యాచ్మెంట్ ప్రాంతం: వర్షపు నీటిని సేకరిస్తుంది">Catchment Area: Roof surface that collects rainwater</div>
+      <div class="rec-item" data-en="Gutters & Pipes: Channel water from roof to storage" data-hi="गटर और पाइप: छत से पानी को भंडारण तक मार्गित करते हैं" data-te="గటర్స్ & పైప్స్: పైకప్పు నుండి నిల్వకు నీటిని చానల్ చేస్తాయి">Gutters & Pipes: Channel water from roof to storage</div>
+      <div class="rec-item" data-en="First Flush Diverter: Removes initial dirty water" data-hi="फर्स्ट फ्लश डाइवर्टर: प्रारंभिक गंदा पानी हटाता है" data-te="ఫస్ట్ ఫ్లష్ డైవర్టర్: ప్రారంభమైన మలిన నీటిని తొలగిస్తుంది">First Flush Diverter: Removes initial dirty water</div>
+      <div class="rec-item" data-en="Storage Tank: Stores collected clean water" data-hi="स्टोरेज टैंक: एकत्रित साफ पानी को स्टोर करता है" data-te="స్టోరేజ్ ట్యాంక్: సేకరించిన స్వచ్ఛమైన నీటిని నిల్వ చేస్తుంది">Storage Tank: Stores collected clean water</div>
+      <div class="rec-item" data-en="Filter System: Ensures water quality for use" data-hi="फिल्टर सिस्टम: उपयोग के लिए पानी की गुणवत्ता सुनिश्चित करता है" data-te="ఫిల్టర్ సిస్టమ్: వినియోగానికి నీటి నాణ్యతను నిర్ధారిస్తుంది">Filter System: Ensures water quality for use</div>
+    </div>
+  </div>
+</div>
+
+      <!-- About Tab -->
+      <div id="about" class="tab-content">
+  <div class="guide-content">
+    <!-- About save water -->
+    <div class="guide-section">
+      <h3 data-en="About save water" data-hi="save water के बारे में" data-te="save water గురించి">About save water</h3>
+      <p data-en="save water is an intelligent assessment tool designed to help homeowners and communities make informed decisions about rainwater harvesting. Our platform combines meteorological data, hydrogeological information, and engineering principles to provide accurate, personalized recommendations."
+         data-hi="save water एक बुद्धिमान मूल्यांकन उपकरण है जो घर मालिकों और समुदायों को वर्षा जल संचयन के बारे में सूचित निर्णय लेने में मदद करने के लिए डिज़ाइन किया गया है। हमारा प्लेटफ़ॉर्म मौसम विज्ञान डेटा, भू-जल संबंधी जानकारी और इंजीनियरिंग सिद्धांतों को मिलाकर सटीक, व्यक्तिगत सिफारिशें प्रदान करता है।"
+         data-te="save water ఒక బుద్ధిమంతమైన అంచనా సాధనం, ఇది గృహ యజమానులు మరియు సమాజాలకు వర్షపు నీటి సేకరణ గురించి సచ్చరిత నిర్ణయాలు తీసుకోవడంలో సహాయపడడానికి రూపొందించబడింది. మా ప్లాట్‌ఫారం వాతావరణ శాస్త్ర డేటా, హైడ్రోజియోలాజికల్ సమాచారం మరియు ఇంజనీరింగ్ సూత్రాలను కలిపి ఖచ్చితమైన, వ్యక్తిగత సిఫార్సులను అందిస్తుంది।">
+        save water is an intelligent assessment tool designed to help homeowners and communities make informed decisions about rainwater harvesting. Our platform combines meteorological data, hydrogeological information, and engineering principles to provide accurate, personalized recommendations.
+      </p>
+    </div>
+
+    <!-- Our Mission -->
+    <div class="guide-section">
+      <h3 data-en="Our Mission" data-hi="हमारा मिशन" data-te="మా మిషన్">Our Mission</h3>
+      <p data-en="To promote sustainable water management practices by making rainwater harvesting accessible, understandable, and actionable for everyone. We believe every rooftop can contribute to water security and environmental conservation."
+         data-hi="सतत जल प्रबंधन प्रथाओं को बढ़ावा देने के लिए, वर्षा जल संचयन को सभी के लिए सुलभ, समझने योग्य और क्रियाशील बनाना। हमें विश्वास है कि हर छत जल सुरक्षा और पर्यावरण संरक्षण में योगदान कर सकती है।"
+         data-te="సుస్థిర జల నిర్వహణ సాధనాలను ప్రోత్సహించడానికి, వర్షపు నీటి సేకరణను అందరికీ సులభం, అర్థమయ్యే, మరియు కార్యాచరణకు అనువుగా చేయడం. ప్రతి పైకప్పు నీటి భద్రత మరియు పర్యావరణ సంరక్షణకు తోడ్పడుతుందని మేము నమ్ముతాము।">
+        To promote sustainable water management practices by making rainwater harvesting accessible, understandable, and actionable for everyone. We believe every rooftop can contribute to water security and environmental conservation.
+      </p>
+    </div>
+
+    <!-- Methodology -->
+    <div class="guide-section">
+      <h3 data-en="Methodology" data-hi="पद्धति" data-te="విధానం">Methodology</h3>
+      <div class="rec-item" data-en="Uses official IMD meteorological data for accurate rainfall information" data-hi="सटीक वर्षा जानकारी के लिए आधिकारिक IMD मौसम विज्ञान डेटा का उपयोग करता है" data-te="ఖచ్చితమైన వర్షపాతం సమాచారం కోసం అధికారిక IMD వాతావరణ డేటాను ఉపయోగిస్తుంది">Uses official IMD meteorological data for accurate rainfall information</div>
+      <div class="rec-item" data-en="Incorporates CGWB guidelines for groundwater recharge systems" data-hi="भूजल पुनर्भरण प्रणालियों के लिए CGWB दिशानिर्देश शामिल करता है" data-te="భూగర్భ జల రీచార్జ్ వ్యవస్థల కోసం CGWB మార్గదర్శకాలను కలిగి ఉంటుంది">Incorporates CGWB guidelines for groundwater recharge systems</div>
+      <div class="rec-item" data-en="Factors in local soil conditions and hydrogeological characteristics" data-hi="स्थानीय मिट्टी की परिस्थितियों और भू-जल संबंधी विशेषताओं को ध्यान में रखता है" data-te="స్థానిక మట్టీ పరిస్థితులు మరియు హైడ్రోజియోలాజికల్ లక్షణాలను పరిగణనలోకి తీసుకుంటుంది">Factors in local soil conditions and hydrogeological characteristics</div>
+      <div class="rec-item" data-en="Considers building codes and structural requirements" data-hi="निर्माण कोड और संरचनात्मक आवश्यकताओं पर विचार करता है" data-te="భవన కోడ్‌లు మరియు నిర్మాణ అవసరాలను పరిగణలోకి తీసుకుంటుంది">Considers building codes and structural requirements</div>
+      <div class="rec-item" data-en="Provides cost-effective solutions within budget constraints" data-hi="बजट सीमाओं के भीतर किफायती समाधान प्रदान करता है" data-te="బడ్జెట్ పరిమితులలో ఖర్చు-ప్రభావవంతమైన పరిష్కారాలను అందిస్తుంది">Provides cost-effective solutions within budget constraints</div>
+    </div>
+  </div>
+</div>
+
+
+  <script>
+    // City rainfall and groundwater data
+    const cityData = {
+      "Mumbai": { rainfall: 2213, groundwater: 5 },
+      "Delhi": { rainfall: 758.9, groundwater: 20 },
+      "Bangalore": { rainfall: 900, groundwater: 10 },
+      "Chennai": { rainfall: 1400, groundwater: 12 },
+      "Hyderabad": { rainfall: 859.6, groundwater: 15 },
+      "Visakhapatnam": { rainfall: 1200, groundwater: 10 },
+      "Surat": { rainfall: 1500, groundwater: 12 },
+      "Vadodara": { rainfall: 800, groundwater: 20 },
+      "Jaipur": { rainfall: 650, groundwater: 30 },
+      "Bhopal": { rainfall: 1200, groundwater: 18 },
+      "Patna": { rainfall: 1200, groundwater: 15 },
+      "Coimbatore": { rainfall: 800, groundwater: 15 }
+    };
+
+    let currentStep = 1;
+    let currentLanguage = 'en';
+
+    // Language switching
+    function setLanguage(lang) {
+  currentLanguage = lang;
+  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+
+  // Update all labels and elements
+  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+    el.textContent = el.getAttribute('data-' + lang);
+  });
+
+  // Update select options without losing values
+  document.querySelectorAll('select').forEach(select => {
+    select.querySelectorAll('option').forEach(option => {
+      const text = option.getAttribute('data-' + lang);
+      if (text) option.textContent = text;
+    });
+  });
+}
+
+
+    // Tab switching
+    function openTab(tabName) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+      
+      event.target.classList.add('active');
+      document.getElementById(tabName).classList.add('active');
+    }
+
+    // Step navigation
+    function goToStep(step) {
+      // Validate current step before moving
+      if (step > currentStep && !validateCurrentStep()) {
+        return;
+      }
+
+      // Hide all form sections
+      document.querySelectorAll('.form-section').forEach(section => {
+        section.classList.remove('active');
+      });
+
+      // Update step indicators
+      document.querySelectorAll('.step').forEach((stepEl, index) => {
+        stepEl.classList.remove('active', 'completed');
+        if (index + 1 < step) {
+          stepEl.classList.add('completed');
+        } else if (index + 1 === step) {
+          stepEl.classList.add('active');
+        }
+      });
+
+      // Show target step
+      document.getElementById('form-step-' + step).classList.add('active');
+      currentStep = step;
+    }
+
+    function validateCurrentStep() {
+      switch(currentStep) {
+        case 1:
+          const name = document.getElementById('userName').value.trim();
+          const city = document.getElementById('userCity').value;
+          if (!name || !city) {
+            alert('Please fill in your name and select a city!');
+            return false;
+          }
+          return true;
+        case 2:
+          const roofArea = parseFloat(document.getElementById('roofArea').value);
+          const openSpace = parseFloat(document.getElementById('openSpace').value);
+          const familySize = parseFloat(document.getElementById('familySize').value);
+          if (isNaN(roofArea) || roofArea <= 0 || isNaN(openSpace) || openSpace < 0 || isNaN(familySize) || familySize <= 0) {
+            alert('Please enter valid values for all fields!');
+            return false;
+          }
+          return true;
+        default:
+          return true;
+      }
+    }
+
+    // Calculate results
+    function calculateResults() {
+      if (!validateCurrentStep()) return;
+
+      const name = document.getElementById('userName').value.trim();
+      const city = document.getElementById('userCity').value;
+      const propertyType = document.getElementById('propertyType').value;
+      const roofArea = parseFloat(document.getElementById('roofArea').value);
+      const openSpace = parseFloat(document.getElementById('openSpace').value);
+      const roofMaterial = document.getElementById('roofMaterial').value;
+      const familySize = parseFloat(document.getElementById('familySize').value);
+      const waterUsage = parseFloat(document.getElementById('waterUsage').value);
+      const usageGoal = document.getElementById('usageGoal').value;
+
+      // Get city data
+      const cityInfo = cityData[city] || { rainfall: 800, groundwater: 15 };
+      
+      // Runoff coefficients
+      const runoffCoeff = {
+        concrete: 0.85,
+        tiles: 0.75,
+        metal: 0.90,
+        asbestos: 0.80
+      };
+
+      const coeff = runoffCoeff[roofMaterial] || 0.8;
+      
+      // Calculations
+      const annualRainfall = cityInfo.rainfall;
+      const annualCollection = (roofArea * annualRainfall * coeff) / 1000; // cubic meters
+      const dailyAverage = (annualCollection * 1000) / 365; // liters
+      const dailyRequirement = familySize * waterUsage;
+      const waterSavings = Math.min((dailyAverage / dailyRequirement) * 100, 100);
+      const monthlySavings = Math.min(dailyAverage * 30, dailyRequirement * 30);
+      
+      // Cost estimation
+      const tankSize = Math.max(2000, Math.min(dailyAverage * 15, 15000));
+      const systemCost = Math.round(tankSize * 12 + 25000); // ₹12 per liter + setup
+      
+      // Feasibility
+      let feasibility = "Good";
+      if (annualRainfall < 600) feasibility = "Moderate";
+      else if (annualRainfall > 1200) feasibility = "Excellent";
+      
+      // Display results
+      displayResults({
+        name, city, annualCollection, dailyAverage, waterSavings, 
+        systemCost, feasibility, tankSize, monthlySavings, 
+        annualRainfall, usageGoal, openSpace
+      });
+    }
+
+    function displayResults(data) {
+      document.getElementById('welcomeMsg').textContent = `Hello ${data.name} from ${data.city}! 🌟`;
+
+      // Metrics
+      document.getElementById('metricsContainer').innerHTML = `
+        <div class="metric-card">
+          <div class="metric-value">${data.annualCollection.toFixed(1)}</div>
+          <div class="metric-label">Cubic Meters/Year</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">${Math.round(data.dailyAverage)}</div>
+          <div class="metric-label">Liters/Day</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">${Math.round(data.waterSavings)}%</div>
+          <div class="metric-label">Water Independence</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">${data.feasibility}</div>
+          <div class="metric-label">Feasibility Rating</div>
+        </div>
+      `;
+
+      // Recommendations
+      const recommendations = generateRecommendations(data);
+      document.getElementById('recommendationsContainer').innerHTML = recommendations.map(rec => 
+        `<div class="rec-item">${rec}</div>`
+      ).join('');
+
+      // Show results
+      document.getElementById('results').classList.add('show');
+      document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function generateRecommendations(data) {
+      const recs = [];
+      
+      recs.push(`Install ${Math.round(data.tankSize/1000)}K liter storage tank for optimal collection`);
+      
+      if (data.openSpace >= 25) {
+        recs.push("Build recharge pit (3m×3m×3m) for groundwater recharge");
+      } else if (data.openSpace >= 10) {
+        recs.push("🕳️ Install recharge well (1m diameter) for groundwater recharge");
+      } else {
+        recs.push("Focus on rooftop storage due to limited space");
+      }
+      
+      if (data.usageGoal === 'drinking') {
+        recs.push("🔬 Install multi-stage filtration for potable water quality");
+      }
+      
+      recs.push(`💰 Estimated investment: ₹${data.systemCost.toLocaleString()} (ROI in 3-4 years)`);
+      
+      if (data.annualRainfall > 1000) {
+        recs.push("🌧️ Excellent rainfall area - consider expanding storage capacity");
+      }
+      
+      recs.push(`📅 Best installation time: April-May (before monsoon)`);
+      recs.push(`🔧 Monthly maintenance cost: ₹200-500`);
+      
+      return recs;
+    }
+
+    function downloadReport() {
+      const name = document.getElementById('userName').value || 'User';
+      const reportContent = `
+save water ASSESSMENT REPORT
+========================================
+Generated on: ${new Date().toLocaleDateString()}
+
+PERSONAL DETAILS:
+Name: ${document.getElementById('userName').value}
+City: ${document.getElementById('userCity').value}
+Property: ${document.getElementById('propertyType').value}
+
+PROPERTY SPECIFICATIONS:
+Roof Area: ${document.getElementById('roofArea').value} sq.m
+Open Space: ${document.getElementById('openSpace').value} sq.m
+Roof Material: ${document.getElementById('roofMaterial').value}
+Family Size: ${document.getElementById('familySize').value} people
+
+ASSESSMENT RESULTS:
+Annual Collection Potential: ${((parseFloat(document.getElementById('roofArea').value) * (cityData[document.getElementById('userCity').value]?.rainfall || 800) * 0.8) / 1000).toFixed(2)} cubic meters
+Daily Average Collection: ${Math.round(((parseFloat(document.getElementById('roofArea').value) * (cityData[document.getElementById('userCity').value]?.rainfall || 800) * 0.8) / 1000 * 1000) / 365)} liters
+Water Independence Level: ${Math.round(Math.min((((parseFloat(document.getElementById('roofArea').value) * (cityData[document.getElementById('userCity').value]?.rainfall || 800) * 0.8) / 1000 * 1000) / 365) / (parseFloat(document.getElementById('familySize').value) * parseFloat(document.getElementById('waterUsage').value)) * 100, 100))}%
+
+RECOMMENDATIONS:
+✓ Install rainwater harvesting system
+✓ Recommended tank size: ${Math.round(Math.max(2000, Math.min(((parseFloat(document.getElementById('roofArea').value) * (cityData[document.getElementById('userCity').value]?.rainfall || 800) * 0.8) / 1000 * 1000) / 365 * 15, 15000))/1000)}K liters
+✓ Estimated cost: ₹${Math.round(Math.max(2000, Math.min(((parseFloat(document.getElementById('roofArea').value) * (cityData[document.getElementById('userCity').value]?.rainfall || 800) * 0.8) / 1000 * 1000) / 365 * 15, 15000)) * 12 + 25000).toLocaleString()}
+
+Generated by save water Assessment Tool
+For support: save water@support.com
+      `;
+
+      const blob = new Blob([reportContent], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `save water_Report_${name}.txt`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    function restartCalculator() {
+      currentStep = 1;
+      
+      // Reset form
+      document.querySelectorAll('input').forEach(input => input.value = '');
+      document.querySelectorAll('select').forEach(select => select.selectedIndex = 0);
+      
+      // Hide results
+      document.getElementById('results').classList.remove('show');
+      
+      // Go back to step 1
+      goToStep(1);
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set initial step
+      goToStep(1);
+    });
+  </script>
+</body>
+</html>
